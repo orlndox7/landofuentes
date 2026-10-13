@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 1) Título y descripción de la página -->
+<title>Lando Fuentes | Diseño de e-learning y capacitación</title>
+<meta name="description" content="Diseñador gráfico especializado en e-learning y capacitación. Cursos interactivos, rediseño de materiales y herramientas con IA.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%233D4DFF'/><path d='M50 14C54 38 62 46 86 50 62 54 54 62 50 86 46 62 38 54 14 50 38 46 46 38 50 14Z' fill='%23D4F25C'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B1740; --paper:#EFEBFF; --blue:#3D4DFF; --tang:#FF6B3D; --lime:#D4F25C; --pink:#FF9ED0;
+  --display:"Bricolage Grotesque","Arial Black",system-ui,sans-serif;
+  --body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:clamp(.9rem,1.7vh,1.05rem);line-height:1.45;overflow:hidden}
+.stage{height:100dvh;display:grid;grid-template-rows:auto 1fr auto;gap:clamp(.5rem,1.5vh,1.2rem);padding:clamp(.8rem,2.4vh,1.6rem) clamp(1rem,3.5vw,3rem);position:relative}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;position:relative;z-index:2}
+.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;letter-spacing:-.02em}
+.status{display:inline-flex;align-items:center;gap:.5rem;background:var(--ink);color:var(--paper);border-radius:99px;padding:.4rem .9rem;font-size:.85rem;font-weight:500}
+.status i{width:.6rem;height:.6rem;border-radius:50%;background:var(--lime)}
+.main{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1rem,3vw,3rem);min-height:0;position:relative;z-index:1}
+.hero{display:flex;flex-direction:column;justify-content:center;gap:clamp(.6rem,2vh,1.4rem);position:relative;min-height:0}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2rem,min(6.4vw,10.5vh),6rem);line-height:.95;letter-spacing:-.04em;max-width:11ch}
+.squig{width:clamp(110px,16vw,190px);height:auto}
+.lead{max-width:44ch;font-size:clamp(.95rem,2vh,1.2rem)}
+.cta-exp{align-self:flex-start;display:inline-flex;align-items:center;gap:.6rem;min-height:52px;padding:.7rem 1.5rem .7rem 1.1rem;border:2.5px solid var(--ink);border-radius:99px;background:var(--blue);color:#fff;font:800 clamp(1rem,2.4vh,1.25rem) var(--display);letter-spacing:-.01em;text-decoration:none;box-shadow:5px 5px 0 var(--ink);transition:transform .2s cubic-bezier(.3,1.6,.4,1),box-shadow .2s}
+.cta-exp svg{width:1.4em;height:1.4em;flex:none}
+.cta-exp:hover{transform:translate(-2px,-2px) rotate(-1deg);box-shadow:7px 7px 0 var(--ink)}
+.cta-exp:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+.sticker{position:absolute;right:2%;top:2%;width:clamp(84px,13vw,150px);animation:spin 22s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.side{display:flex;flex-direction:column;justify-content:center;gap:clamp(.6rem,1.6vh,1rem);min-height:0;position:relative}
+.blob{position:absolute;inset:-6% -10% -6% -4%;width:116%;height:112%;z-index:-1;opacity:.9;pointer-events:none}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.tab{font:700 clamp(.85rem,1.9vh,1rem)/1.2 var(--body);min-height:44px;padding:.6rem .9rem;border:2.5px solid var(--ink);border-radius:18px;background:#fff;color:var(--ink);cursor:pointer;text-align:left;transition:transform .15s,background .15s}
+.tab:hover{transform:translateY(-2px)}
+.tab[aria-selected=true]{background:var(--a);color:var(--o);box-shadow:4px 4px 0 var(--ink)}
+.panel{background:var(--a);color:var(--o);border:2.5px solid var(--ink);border-radius:28px 28px 28px 6px;padding:clamp(1rem,2.6vh,1.8rem);display:flex;flex-direction:column;gap:clamp(.5rem,1.4vh,.9rem);box-shadow:6px 6px 0 var(--ink);transition:background .25s,color .25s}
+.panel h2{font-family:var(--display);font-weight:800;font-size:clamp(1.4rem,3.6vh,2.2rem);line-height:1;letter-spacing:-.03em}
+.panel p{max-width:42ch}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0}
+.chips li{border:2px solid currentColor;border-radius:99px;padding:.15rem .7rem;font-size:.82rem;font-weight:500}
+.link{align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;padding:.5rem 1.1rem;border-radius:99px;background:var(--ink);color:#fff;font-weight:700;text-decoration:none}
+.foot{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.6rem 1.4rem;border-radius:99px;border:2.5px solid var(--ink);background:#fff;color:var(--ink);font:700 1rem var(--body);text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.main-cta{background:var(--tang);box-shadow:4px 4px 0 var(--ink)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+button.btn{cursor:pointer}
+dialog{margin:auto;padding:0;border:2.5px solid var(--ink);border-radius:28px 28px 28px 6px;background:var(--pink);color:var(--ink);max-width:min(92vw,420px);box-shadow:6px 6px 0 var(--ink);font:inherit}
+dialog::backdrop{background:rgba(27,23,64,.55)}
+dialog .in{padding:clamp(1.2rem,3vh,2rem)}
+dialog h2{font-family:var(--display);font-weight:800;font-size:1.7rem;line-height:1.05;letter-spacing:-.03em;margin-bottom:.5rem}
+dialog .btn{margin-top:1.1rem;background:var(--ink);color:#fff}
+#contact-dlg{background:var(--lime)}
+dialog .btn.ghost{background:#fff;color:var(--ink)}
+dialog p{margin:.2rem 0}
+.mail{font-weight:700;color:var(--ink);overflow-wrap:anywhere}
+.acts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.acts .btn{margin-top:0}
+dialog{transform-origin:var(--ox,50%) var(--oy,50%)}
+@keyframes liquidIn{
+  0%{transform:scale(.04);border-radius:50%;opacity:0}
+  18%{opacity:1}
+  40%{transform:scale(.92,1.1);border-radius:60% 40% 55% 45% / 45% 58% 42% 55%}
+  62%{transform:scale(1.06,.95);border-radius:42% 58% 42% 58% / 58% 42% 58% 42%}
+  82%{transform:scale(.99,1.02);border-radius:34px 30px 32px 10px}
+  100%{transform:none;border-radius:28px 28px 28px 6px}
+}
+@keyframes liquidOut{
+  0%{transform:none;border-radius:28px 28px 28px 6px;opacity:1}
+  30%{transform:scale(1.06,.93);border-radius:44% 56% 46% 54% / 56% 44% 56% 44%}
+  100%{transform:scale(.04);border-radius:50%;opacity:0}
+}
+@keyframes inFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes inOut{to{opacity:0}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes fadeout{to{opacity:0}}
+dialog[open]{animation:liquidIn .85s ease-in-out}
+dialog[open] .in{animation:inFade .4s .3s ease-out both}
+dialog[open]::backdrop{animation:fade .4s ease-out;backdrop-filter:blur(5px)}
+dialog.closing{animation:liquidOut .38s ease-in forwards}
+dialog.closing .in{animation:inOut .15s forwards}
+dialog.closing::backdrop{animation:fadeout .38s ease-in forwards;backdrop-filter:blur(5px)}
+.spark{position:absolute;pointer-events:none}
+@media (max-width:820px){
+  .main{grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:.6rem}
+  .hero{justify-content:flex-start;gap:.5rem}
+  h1{font-size:clamp(1.7rem,min(9vw,6.6vh),3rem);max-width:none}
+  .squig,.status{display:none}
+  .lead{font-size:.9rem;max-width:none}
+  .sticker{width:70px;top:-4px}
+  .cta-exp{min-height:46px;padding:.5rem 1.1rem .5rem .9rem;font-size:1rem;box-shadow:4px 4px 0 var(--ink)}
+  .panel p{font-size:.88rem}
+  .chips{display:none}
+  .tab{padding:.4rem .7rem;min-height:40px}
+  .blob{display:none}
+  .btn{min-height:44px;padding:.4rem .9rem;font-size:.88rem}
+  .foot{gap:.4rem}
+}
+@media (prefers-reduced-motion:reduce){.sticker{animation:none}*{transition:none!important}dialog,dialog::backdrop,dialog .in{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="stage">
+
+  <header class="bar">
+    <!-- 2) Tu marca personal -->
+    <span class="logo">Lando Fuentes</span>
+    <span class="status"><i></i>Disponible para proyectos</span>
+  </header>
+
+  <div class="main">
+    <section class="hero" aria-label="Presentación">
+      <svg class="sticker" viewBox="0 0 160 160" aria-hidden="true">
+        <defs><path id="ring" d="M80,80 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs>
+        <circle cx="80" cy="80" r="78" fill="#D4F25C" stroke="#1B1740" stroke-width="3"/>
+        <text font-family="Bricolage Grotesque, Arial Black, sans-serif" font-size="13" font-weight="800" fill="#1B1740">
+          <textPath href="#ring" textLength="360" lengthAdjust="spacing">diseño • e-learning • interactivo • IA •</textPath>
+        </text>
+        <path d="M80 56C82 72 88 78 104 80 88 82 82 88 80 104 78 88 72 82 56 80 72 78 78 72 80 56Z" fill="#3D4DFF"/>
+      </svg>
+
+      <h1>Cursos que se entienden y se terminan.</h1>
+      <svg class="squig" viewBox="0 0 160 20" aria-hidden="true"><path d="M3 10Q18 0 33 10T63 10T93 10T123 10T157 10" fill="none" stroke="#FF6B3D" stroke-width="6" stroke-linecap="round"/></svg>
+      <p class="lead">Soy diseñador gráfico especializado en e-learning y capacitación. Uso IA para producir más rápido y con más interactividad.</p>
+      <a class="cta-exp" href="cv.html"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C54 30 70 46 100 50 70 54 54 70 50 100 46 70 30 54 0 50 30 46 46 30 50 0Z" fill="#D4F25C"/></svg>Ver mi experiencia</a>
+    </section>
+
+    <section class="side" aria-label="Lo que hago">
+      <svg class="blob" viewBox="0 0 500 500" aria-hidden="true"><path d="M421 322Q380 420 270 424T120 330Q60 240 130 150T300 70Q420 90 440 200T421 322Z" fill="#fff" opacity=".7"/></svg>
+      <svg class="spark" style="right:-1%;top:-3%;width:46px" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C54 30 70 46 100 50 70 54 54 70 50 100 46 70 30 54 0 50 30 46 46 30 50 0Z" fill="#FF9ED0" stroke="#1B1740" stroke-width="4"/></svg>
+
+      <div class="tabs" role="tablist" aria-label="Servicios">
+        <button class="tab" role="tab" id="t0" aria-selected="true" aria-controls="panel" style="--a:var(--blue);--o:#fff">Cursos interactivos</button>
+        <button class="tab" role="tab" id="t1" aria-selected="false" aria-controls="panel" tabindex="-1" style="--a:var(--tang);--o:var(--ink)">Rediseño de materiales</button>
+        <button class="tab" role="tab" id="t2" aria-selected="false" aria-controls="panel" tabindex="-1" style="--a:var(--lime);--o:var(--ink)">Herramientas con IA</button>
+        <button class="tab" role="tab" id="t3" aria-selected="false" aria-controls="panel" tabindex="-1" style="--a:var(--pink);--o:var(--ink)">Casos de estudio</button>
+      </div>
+
+      <article class="panel" id="panel" role="tabpanel" aria-labelledby="t0" tabindex="0" style="--a:var(--blue);--o:#fff">
+        <h2></h2>
+        <p></p>
+        <ul class="chips"></ul>
+        <!-- 3) CAMBIA cada href="#" por el enlace de tu ejemplo cuando lo tengas -->
+        <a class="link" href="#">Ver ejemplo</a>
+      </article>
+    </section>
+  </div>
+
+  <footer class="foot">
+    <!-- 4) "Escríbeme" abre un pop up con WhatsApp y correo. Behance abre un aviso "pronto disponible" -->
+    <button type="button" class="btn main-cta" id="contact">Escríbeme</button>
+    <a class="btn" href="https://www.linkedin.com/in/orlando-fuentes-63674822/" target="_blank" rel="noopener">LinkedIn</a>
+    <button type="button" class="btn" id="behance">Behance</button>
+  </footer>
+</div>
+
+<dialog id="contact-dlg" aria-labelledby="contact-t">
+  <div class="in">
+    <h2 id="contact-t">¿Necesitas atención directa?</h2>
+    <div class="acts">
+      <!-- Cambia el número aquí si lo necesitas -->
+      <a class="btn" href="https://wa.me/528122201887?text=Hola%20Lando%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo." target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <p style="margin-top:1.2rem">¿Eres tímido? Mándame un correo:</p>
+    <p><a class="mail" href="mailto:a.fuentes0890@gmail.com">a.fuentes0890@gmail.com</a></p>
+    <div class="acts" style="margin-top:.7rem">
+      <button type="button" class="btn ghost" id="copy-mail" aria-live="polite">Copiar correo</button>
+      <a class="btn ghost" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=a.fuentes0890@gmail.com" target="_blank" rel="noopener">Abrir en Gmail</a>
+    </div>
+    <div class="acts" style="margin-top:.9rem"><button type="button" class="btn" id="contact-close">Cerrar</button></div>
+  </div>
+</dialog>
+
+<dialog id="soon" aria-labelledby="soon-t">
+  <div class="in">
+    <h2 id="soon-t">Estoy trabajando en ello</h2>
+    <p>Pronto estará disponible.</p>
+    <button type="button" class="btn" id="soon-close" autofocus>Entendido</button>
+  </div>
+</dialog>
+
+<script>
+const data=[
+ {t:"Cursos interactivos",p:"Cursos web con escenarios, quizzes y retroalimentación inmediata, pensados para que la gente llegue al final.",c:["Escenarios","Quizzes","HTML5"],a:"var(--blue)",o:"#fff"},
+ {t:"Rediseño de materiales",p:"Convierto presentaciones y PDFs densos en materiales claros, visuales y fáciles de recordar.",c:["Infografías","Guías","Presentaciones"],a:"var(--tang)",o:"var(--ink)"},
+ {t:"Herramientas con IA",p:"Onboardings, buscadores de políticas y generadores de quizzes que ahorran horas de trabajo al equipo.",c:["Automatización","Apps internas","IA"],a:"var(--lime)",o:"var(--ink)"},
+ {t:"Casos de estudio",p:"Problema, proceso y resultado: así pienso y resuelvo cada proyecto de capacitación.",c:["Proceso","Decisiones","Resultados"],a:"var(--pink)",o:"var(--ink)"}
+];
+const tabs=[...document.querySelectorAll('.tab')],panel=document.getElementById('panel');
+function show(i){
+  const d=data[i];
+  tabs.forEach((b,k)=>{b.setAttribute('aria-selected',k===i);b.tabIndex=k===i?0:-1});
+  panel.setAttribute('aria-labelledby','t'+i);
+  panel.style.setProperty('--a',d.a);panel.style.setProperty('--o',d.o);
+  panel.querySelector('h2').textContent=d.t;
+  panel.querySelector('p').textContent=d.p;
+  panel.querySelector('.chips').innerHTML=d.c.map(x=>'<li>'+x+'</li>').join('');
+}
+tabs.forEach((b,i)=>{
+  b.addEventListener('click',()=>show(i));
+  b.addEventListener('keydown',e=>{
+    const k={ArrowRight:1,ArrowDown:1,ArrowLeft:-1,ArrowUp:-1}[e.key];
+    if(k){e.preventDefault();const n=(i+k+tabs.length)%tabs.length;show(n);tabs[n].focus()}
+  });
+});
+show(0);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function closeDlg(d){
+  if(!d.open||d.classList.contains('closing'))return;
+  if(reduce){d.close();return}
+  d.classList.add('closing');
+  setTimeout(()=>{d.classList.remove('closing');d.close()},380);
+}
+[['soon','behance','soon-close'],['contact-dlg','contact','contact-close']].forEach(([d,o,c])=>{
+  const dlg=document.getElementById(d);
+  const trg=document.getElementById(o);
+  trg.addEventListener('click',()=>{
+    dlg.showModal();
+    const t=trg.getBoundingClientRect(),w=document.documentElement.clientWidth,h=document.documentElement.clientHeight;
+    dlg.style.setProperty('--ox',(t.left+t.width/2-(w-dlg.offsetWidth)/2)+'px');
+    dlg.style.setProperty('--oy',(t.top+t.height/2-(h-dlg.offsetHeight)/2)+'px');
+  });
+  document.getElementById(c).addEventListener('click',()=>closeDlg(dlg));
+  dlg.addEventListener('click',e=>{if(e.target===dlg)closeDlg(dlg)});
+  dlg.addEventListener('cancel',e=>{e.preventDefault();closeDlg(dlg)});
+});
+const cb=document.getElementById('copy-mail');
+cb.addEventListener('click',async()=>{
+  const m='a.fuentes0890@gmail.com';
+  try{await navigator.clipboard.writeText(m)}catch(err){
+    const t=document.createElement('textarea');t.value=m;
+    document.getElementById('contact-dlg').appendChild(t);t.select();
+    try{document.execCommand('copy')}catch(_){}
+    t.remove();
+  }
+  cb.textContent='¡Copiado!';
+  setTimeout(()=>{cb.textContent='Copiar correo'},2000);
+});
+</script>
+</body>
+</html>
