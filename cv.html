@@ -110,8 +110,8 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(2rem,min(6vw,9.5vh
         </svg>
       </div>
       <h1>Orlando Fuentes</h1>
-      <p class="role">Especialista en diseño digital, e-learning y capacitación corporativa</p>
-      <p class="lead">Combino experiencia en diseño multimedia y capacitación corporativa con desarrollo de soluciones digitales, comercio electrónico y proyectos comerciales. Enfocado en crear materiales claros, funcionales y orientados a las necesidades del negocio.</p>
+      <p class="role">Diseño instruccional · Administración LMS · Capacitación corporativa</p>
+      <p class="lead">Experiencia en diseño instruccional, administración principal de LMS (Cornerstone y ADP), desarrollo e-learning y coordinación con áreas directivas y equipos internacionales. Combino ejecución técnica con soluciones digitales para necesidades de negocio.</p>
       <ul class="langs"><li>Inglés · Negocios</li><li>Español · Nativo</li></ul>
     </section>
 
@@ -140,9 +140,9 @@ const data=[
  {y:'2019',t:'Diseñador Instruccional',o:'Rent-A-Center · 2019 – '+FIN_RENT,a:'var(--blue)',k:'#fff',b:['Desarrollo de cursos digitales para personal operativo, administrativo, gerencial y de nuevo ingreso, implementados en múltiples sucursales de México.','Responsable principal de ADP en México, con el máximo nivel de permisos; capacitación recibida en el corporativo de Estados Unidos y coordinación semanal con su equipo.','Participación en el ciclo completo de e-learning: organización didáctica, diseño multimedia, actividades interactivas, evaluaciones y publicación en LMS.','Desarrollo de herramientas web y propuestas de mejora adoptadas por la organización para facilitar procesos de capacitación y el trabajo de otras áreas.','Colaboración con equipos corporativos y coordinación de revisiones y aprobaciones con distintas áreas.','Proyectos reconocidos por gerentes, directivos y responsables de capacitación por sus aportaciones a la experiencia de aprendizaje.']},
  {y:'2025',t:'Fundador · Desarrollo digital y comercial',o:'BENOM México · 2025 – 2026',a:'var(--tang)',k:'var(--ink)',b:['Puesta en marcha de una iniciativa comercial de productos y suministros médicos con clientes reales.','Creación y gestión de tienda virtual y catálogo digital de productos.','Desarrollo directo de materiales gráficos, contenidos comerciales y acciones de marketing.','Atención comercial y gestión de relaciones con clientes y proveedores.']}
 ];
-const tools=[['Illustrator',5],['Photoshop',5],['Premiere',4],['After Effects',4],['InDesign',4],['WEB',4],['MS Office',4],['Audition',5]];
+const tools=[['Articulate',5],['Cornerstone',5],['ADP',5],['Illustrator',5],['Photoshop',5],['Premiere',4],['After Effects',4],['HTML / CSS',4]];
 const ia=['Herramientas de IA','ChatGPT','Claude','Gemini','Comercio electrónico'];
-const soft=['Capacitación corporativa','Diseño multimedia','E-learning','Coordinación','Comunicación','Resolución de problemas','Marketing digital','Branding'];
+const soft=['Diseño instruccional','Administración LMS','Capacitación corporativa','E-learning','Coordinación interdepartamental','Comunicación','Soluciones digitales','Diseño multimedia'];
 
 document.getElementById('tools').innerHTML=tools.map(([n,v])=>`<li><span>${n}</span><span class="st" role="img" aria-label="${v} de 5">${'<b>★</b>'.repeat(v)}${'<s>★</s>'.repeat(5-v)}</span></li>`).join('');
 document.getElementById('soft').innerHTML=ia.map(x=>`<li class="ia">${x}</li>`).join('')+soft.map(x=>`<li>${x}</li>`).join('');
