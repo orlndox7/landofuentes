@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Experiencia | Lando Fuentes</title>
-<meta name="description" content="Experiencia profesional y habilidades de Lando Fuentes, diseñador gráfico especializado en e-learning y capacitación.">
+<meta name="description" content="Experiencia profesional de Lando Fuentes en diseño digital, e-learning, capacitación corporativa, multimedia y desarrollo de proyectos comerciales.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%233D4DFF'/><path d='M50 14C54 38 62 46 86 50 62 54 54 62 50 86 46 62 38 54 14 50 38 46 46 38 50 14Z' fill='%23D4F25C'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -110,8 +110,8 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(2rem,min(6vw,9.5vh
         </svg>
       </div>
       <h1>Lando Fuentes</h1>
-      <p class="role">Diseñador gráfico especializado en e-learning y capacitación</p>
-      <p class="lead">Implemento mis habilidades y mi experiencia para mejorar los procesos y los resultados dentro de las empresas.</p>
+      <p class="role">Especialista en diseño digital, e-learning y capacitación corporativa</p>
+      <p class="lead">Combino experiencia en diseño multimedia y capacitación corporativa con desarrollo de soluciones digitales, comercio electrónico y proyectos comerciales. Enfocado en crear materiales claros, funcionales y orientados a las necesidades del negocio.</p>
       <ul class="langs"><li>Inglés · Negocios</li><li>Español · Nativo</li></ul>
     </section>
 
@@ -130,18 +130,19 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(2rem,min(6vw,9.5vh
 </div>
 
 <script>
-/* Año en que terminó tu último puesto (Rent-A-Center) */
+/* Historial profesional: información validada con el titular del CV. */
 const FIN_RENT='2024';
 const data=[
  {y:'2007',t:'Facultad de Artes Visuales',o:'2007 – 2011',a:'#fff',k:'var(--ink)',b:['Lic. Diseño Gráfico']},
  {y:'2011',t:'Diseñador Digital',o:'Grupo GP · 2011 – 2014',a:'var(--tang)',k:'var(--ink)',b:['Diseño de contenido digital para uso interno de la empresa.']},
  {y:'2014',t:'Diseñador de materiales',o:'Soriana · 2014 – 2015',a:'var(--pink)',k:'var(--ink)',b:['Diseño de material digital para uso interno.','Producción de video para uso interno.']},
  {y:'2015',t:'Diseñador Gráfico',o:'Logrand Entertainment Group · 2015 – 2019',a:'var(--lime)',k:'var(--ink)',b:['Trabajo junto a diseñadores instruccionales en materiales de capacitación en línea.','Diseño y desarrollo web de la plataforma para implementar esa capacitación.']},
- {y:'2019',t:'Diseñador',o:'Rent-A-Center · 2019 – '+FIN_RENT,a:'var(--blue)',k:'#fff',b:['Materiales multimedia para capacitación en línea y operaciones internas.','Coordinación constante con el equipo de la matriz en E.U.','Propuestas para mejorar los indicadores de rendimiento de la empresa.','Trato directo con proveedores para asegurar calidad y eficiencia.']}
+ {y:'2019',t:'Diseñador multimedia y capacitación',o:'Rent-A-Center · 2019 – '+FIN_RENT,a:'var(--blue)',k:'#fff',b:['Desarrollo de materiales multimedia para capacitación en línea y comunicaciones operativas internas.','Colaboración con el equipo corporativo en Estados Unidos.','Elaboración de propuestas de mejora para materiales y procesos internos.','Coordinación con proveedores para necesidades de producción y calidad.']},
+ {y:'2025',t:'Fundador · Desarrollo digital y comercial',o:'BENOM México · 2025 – 2026',a:'var(--tang)',k:'var(--ink)',b:['Puesta en marcha de una iniciativa comercial de productos y suministros médicos con clientes reales.','Creación y gestión de tienda virtual y catálogo digital de productos.','Desarrollo directo de materiales gráficos, contenidos comerciales y acciones de marketing.','Atención comercial y gestión de relaciones con clientes y proveedores.']}
 ];
 const tools=[['Illustrator',5],['Photoshop',5],['Premiere',4],['After Effects',4],['InDesign',4],['WEB',4],['MS Office',4],['Audition',5]];
-const ia=['Automatizaciones en IA','Procesos en IA','Claude','Gemini','ChatGPT'];
-const soft=['Coordinación','Capacitación continua','Creatividad','Resolución de problemas','Comunicación','Proactivo','Aprendizaje rápido','Briefing','Branding'];
+const ia=['Herramientas de IA','ChatGPT','Claude','Gemini','Comercio electrónico'];
+const soft=['Capacitación corporativa','Diseño multimedia','E-learning','Coordinación','Comunicación','Resolución de problemas','Marketing digital','Branding'];
 
 document.getElementById('tools').innerHTML=tools.map(([n,v])=>`<li><span>${n}</span><span class="st" role="img" aria-label="${v} de 5">${'<b>★</b>'.repeat(v)}${'<s>★</s>'.repeat(5-v)}</span></li>`).join('');
 document.getElementById('soft').innerHTML=ia.map(x=>`<li class="ia">${x}</li>`).join('')+soft.map(x=>`<li>${x}</li>`).join('');
