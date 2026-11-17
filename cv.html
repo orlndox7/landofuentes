@@ -110,8 +110,8 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(2rem,min(6vw,9.5vh
         </svg>
       </div>
       <h1>Orlando Fuentes</h1>
-      <p class="role">Diseñador instruccional · Administración de plataformas de aprendizaje</p>
-      <p class="lead">Soy diseñador instruccional con más de una década de experiencia en capacitación digital. He desarrollado cursos, administrado plataformas corporativas de aprendizaje y trabajado con distintas áreas para resolver necesidades de capacitación. También tengo experiencia en diseño multimedia y desarrollo web.</p>
+      <p class="role">Diseñador instruccional · Capacitación corporativa y plataformas LMS</p>
+      <p class="lead">Soy diseñador instruccional con más de una década de experiencia en capacitación corporativa. He participado en la detección de necesidades, el desarrollo e impartición de formación presencial y digital, la coordinación de programas y la administración de plataformas LMS y de recursos humanos. También desarrollo soluciones digitales y materiales multimedia.</p>
       <ul class="langs"><li>Inglés para comunicación profesional</li><li>Español nativo</li></ul>
       <nav class="profile-links" aria-label="Enlaces profesionales"><a href="https://www.linkedin.com/in/orlando-fuentes-63674822/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:a.fuentes0890@gmail.com?subject=Solicitud%20de%20CV%20en%20PDF">Solicitar CV PDF</a></nav>
     </section>
@@ -137,10 +137,11 @@ const data=[
   'Desarrollé materiales comerciales, acciones de marketing y la comunicación con clientes y proveedores.'
  ]},
  {y:'2019',t:'Diseñador Instruccional',o:'Rent-A-Center · 2019–2024',a:'var(--blue)',k:'#fff',b:[
-  'Desarrollé cursos e-learning para personal operativo, administrativo, gerencial y de nuevo ingreso en sucursales de México.',
-  'Fui administrador principal de ADP para México (plataforma corporativa de gestión de recursos humanos que también funcionaba como sistema de gestión del aprendizaje, LMS, para administrar la capacitación y su seguimiento). Recibí formación en el corporativo de Estados Unidos y mantuve coordinación semanal con su equipo para revisar el funcionamiento de la plataforma, las actualizaciones, los lineamientos corporativos y los reportes.',
-  'Participé en el desarrollo completo de cursos: estructura, contenido multimedia, actividades, evaluaciones y publicación en plataformas de aprendizaje.',
-  'Propuse mejoras y desarrollé herramientas digitales adoptadas por la empresa, en colaboración con responsables de distintas áreas.'
+   'Participé en la detección de necesidades de capacitación y desarrollé soluciones de aprendizaje digital, presencial y virtual, incluyendo contenidos, materiales multimedia, actividades y evaluaciones.',
+   'Participé en la planeación, organización e impartición de programas de capacitación corporativa, coordinando agendas, sedes, logística, proveedores externos, materiales y colaboración con distintas áreas.',
+   'Participé en la implementación de reportes y mecanismos de seguimiento para monitorear la impartición, participación y cumplimiento de programas de capacitación, así como en su evaluación y mejora continua.',
+   'Fui administrador principal de ADP para México, plataforma de recursos humanos que también funcionaba como LMS. Mantuve coordinación semanal con el equipo de Estados Unidos para revisar su funcionamiento, actualizaciones, lineamientos y reportes.',
+   'Diseñé y desarrollé herramientas digitales y mejoras para apoyar los procesos internos de capacitación, algunas de las cuales fueron adoptadas por la empresa.'
  ]},
  {y:'2015',t:'Diseñador Instruccional',o:'Logrand Entertainment Group · 2015–2019',a:'var(--lime)',k:'var(--ink)',b:[
   'Fui administrador principal de la plataforma de aprendizaje corporativo Cornerstone.',
@@ -160,7 +161,7 @@ const data=[
 ];
 const tools=['Plataformas LMS y de RR. HH. (p. ej., Cornerstone y ADP)','Articulate Storyline / Rise','Adobe Illustrator y Photoshop','Adobe Premiere y After Effects','HTML / CSS','Microsoft 365'];
 const ia=['Comercio electrónico'];
-const soft=['Capacitación corporativa','Administración de sistemas de aprendizaje','Diseño instruccional','Coordinación entre áreas','Comunicación interna','Desarrollo web','Diseño multimedia'];
+const soft=['Diseño instruccional','Coordinación de capacitación','Administración LMS','Impartición presencial y virtual','Evaluación de capacitación','Gestión de proveedores','Diseño multimedia'];
 
 document.getElementById('tools').replaceChildren(...tools.map(name=>{const li=document.createElement('li');li.textContent=name;return li;}));
 document.getElementById('soft').replaceChildren(...[...ia.map(label=>({label,ia:true})),...soft.map(label=>({label,ia:false}))].map(entry=>{const li=document.createElement('li');li.textContent=entry.label;if(entry.ia)li.className='ia';return li;}));
