@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 1) Título y descripción de la página -->
-<title>Orlando Fuentes | Diseño instruccional, LMS y soluciones digitales</title>
-<meta name="description" content="Orlando Fuentes: diseño instruccional, administración LMS, capacitación corporativa y soluciones digitales.">
+
+<title>Orlando Fuentes | Diseño instruccional y capacitación corporativa</title>
+<meta name="description" content="Diseño instruccional, gestión de plataformas de recursos humanos y aprendizaje, capacitación corporativa y soluciones digitales.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%233D4DFF'/><path d='M50 14C54 38 62 46 86 50 62 54 54 62 50 86 46 62 38 54 14 50 38 46 46 38 50 14Z' fill='%23D4F25C'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +17,9 @@
   --body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *{box-sizing:border-box;margin:0}
-html,body{height:100%}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:clamp(.9rem,1.7vh,1.05rem);line-height:1.45;overflow:hidden}
-.stage{height:100dvh;display:grid;grid-template-rows:auto 1fr auto;gap:clamp(.5rem,1.5vh,1.2rem);padding:clamp(.8rem,2.4vh,1.6rem) clamp(1rem,3.5vw,3rem);position:relative}
+html,body{min-height:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:clamp(.9rem,1.7vh,1.05rem);line-height:1.45;min-height:100%;overflow-x:hidden}
+.stage{min-height:100dvh;display:grid;grid-template-rows:auto 1fr auto;gap:clamp(.5rem,1.5vh,1.2rem);padding:clamp(.8rem,2.4vh,1.6rem) clamp(1rem,3.5vw,3rem);position:relative}
 .bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;position:relative;z-index:2}
 .logo{font-family:var(--display);font-weight:800;font-size:1.25rem;letter-spacing:-.02em}
 .status{display:inline-flex;align-items:center;gap:.5rem;background:var(--ink);color:var(--paper);border-radius:99px;padding:.4rem .9rem;font-size:.85rem;font-weight:500}
@@ -106,7 +106,9 @@ dialog.closing::backdrop{animation:fadeout .38s ease-in forwards;backdrop-filter
 }
 @media (prefers-reduced-motion:reduce){.sticker{animation:none}*{transition:none!important}dialog,dialog::backdrop,dialog .in{animation:none!important}}
 
-html{scroll-behavior:smooth}body{height:auto;min-height:100%;overflow-x:hidden;overflow-y:auto}.stage{min-height:100dvh;height:auto}
+html{scroll-behavior:smooth}
+body{height:auto;min-height:100%;overflow-x:hidden;overflow-y:auto}
+.stage{min-height:100dvh;height:auto}
 .portfolio{padding:clamp(2rem,6vw,5rem) clamp(1rem,3.5vw,3rem) 5rem;max-width:1400px;margin:auto;scroll-margin-top:1rem}
 .portfolio-head{max-width:760px;margin-bottom:1.5rem}.portfolio-head h2{font:800 clamp(2rem,4vw,3.5rem)/1.08 var(--display);letter-spacing:-.04em;margin:.5rem 0 1rem}
 .eyebrow,.project-type,.project-note{font-size:.77rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
@@ -122,7 +124,7 @@ html{scroll-behavior:smooth}body{height:auto;min-height:100%;overflow-x:hidden;o
 <div class="stage">
 
   <header class="bar">
-    <!-- 2) Tu marca personal -->
+    
     <span class="logo">Orlando Fuentes</span>
     <span class="status"><i></i>Disponible para proyectos</span>
   </header>
@@ -133,14 +135,14 @@ html{scroll-behavior:smooth}body{height:auto;min-height:100%;overflow-x:hidden;o
         <defs><path id="ring" d="M80,80 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs>
         <circle cx="80" cy="80" r="78" fill="#D4F25C" stroke="#1B1740" stroke-width="3"/>
         <text font-family="Bricolage Grotesque, Arial Black, sans-serif" font-size="13" font-weight="800" fill="#1B1740">
-          <textPath href="#ring" textLength="360" lengthAdjust="spacing">diseño • e-learning • interactivo • IA •</textPath>
+          <textPath href="#ring" textLength="360" lengthAdjust="spacing">capacitación • diseño • tecnología •</textPath>
         </text>
         <path d="M80 56C82 72 88 78 104 80 88 82 82 88 80 104 78 88 72 82 56 80 72 78 78 72 80 56Z" fill="#3D4DFF"/>
       </svg>
 
-      <h1>Aprendizaje digital que funciona.</h1>
+      <h1>Capacitación clara. Soluciones que sirven.</h1>
       <svg class="squig" viewBox="0 0 160 20" aria-hidden="true"><path d="M3 10Q18 0 33 10T63 10T93 10T123 10T157 10" fill="none" stroke="#FF6B3D" stroke-width="6" stroke-linecap="round"/></svg>
-      <p class="lead">Soy Orlando Fuentes. Diseño experiencias de capacitación, administro plataformas LMS y desarrollo soluciones digitales para necesidades reales de negocio.</p>
+      <p class="lead">Soy Orlando Fuentes. Llevo años desarrollando capacitación digital y administrando plataformas para empresas. Me gusta entender qué necesita cada equipo y encontrar la manera de hacerlo funcionar.</p>
       <a class="cta-exp" href="cv.html"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C54 30 70 46 100 50 70 54 54 70 50 100 46 70 30 54 0 50 30 46 46 30 50 0Z" fill="#D4F25C"/></svg>Ver trayectoria</a>
     </section>
 
@@ -150,7 +152,7 @@ html{scroll-behavior:smooth}body{height:auto;min-height:100%;overflow-x:hidden;o
 
       <div class="tabs" role="tablist" aria-label="Servicios">
         <button class="tab" role="tab" id="t0" aria-selected="true" aria-controls="panel" style="--a:var(--blue);--o:#fff">Diseño instruccional</button>
-        <button class="tab" role="tab" id="t1" aria-selected="false" aria-controls="panel" tabindex="-1" style="--a:var(--tang);--o:var(--ink)">Administración LMS</button>
+        <button class="tab" role="tab" id="t1" aria-selected="false" aria-controls="panel" tabindex="-1" style="--a:var(--tang);--o:var(--ink)">Plataformas corporativas</button>
         <button class="tab" role="tab" id="t2" aria-selected="false" aria-controls="panel" tabindex="-1" style="--a:var(--lime);--o:var(--ink)">Soluciones digitales</button>
         <button class="tab" role="tab" id="t3" aria-selected="false" aria-controls="panel" tabindex="-1" style="--a:var(--pink);--o:var(--ink)">Proyectos</button>
       </div>
@@ -159,14 +161,14 @@ html{scroll-behavior:smooth}body{height:auto;min-height:100%;overflow-x:hidden;o
         <h2></h2>
         <p></p>
         <ul class="chips"></ul>
-        <!-- 3) CAMBIA cada href="#" por el enlace de tu ejemplo cuando lo tengas -->
+        
         <a class="link" href="#proyectos">Explorar proyectos</a>
       </article>
     </section>
   </div>
 
   <footer class="foot">
-    <!-- 4) "Escríbeme" abre un pop up con WhatsApp y correo. Behance abre un aviso "pronto disponible" -->
+    
     <button type="button" class="btn main-cta" id="contact">Escríbeme</button>
     <a class="btn" href="https://www.linkedin.com/in/orlando-fuentes-63674822/" target="_blank" rel="noopener">LinkedIn</a>
     <a class="btn" href="#proyectos">Portafolio</a>
@@ -174,23 +176,23 @@ html{scroll-behavior:smooth}body{height:auto;min-height:100%;overflow-x:hidden;o
 </div>
 
 <section class="portfolio" id="proyectos" aria-labelledby="projects-title">
-<div class="portfolio-head"><p class="eyebrow">TRABAJO Y EXPERIENCIA</p><h2 id="projects-title">Proyectos que explican lo que hago.</h2><p>Experiencias realizadas y proyectos en construcción. Los casos corporativos se describen sin compartir materiales internos confidenciales.</p></div>
+<div class="portfolio-head"><p class="eyebrow">TRABAJO Y EXPERIENCIA</p><h2 id="projects-title">Una muestra de lo que he hecho.</h2><p>Aquí reúno parte de mi experiencia y algunos proyectos personales. En los trabajos corporativos explico mi participación sin mostrar información interna de las empresas.</p></div>
 <div class="project-grid">
-<article class="project-card"><span class="project-type">EXPERIENCIA CORPORATIVA</span><h3>Administración LMS: Cornerstone y ADP</h3><p>Administrador principal de Cornerstone en Logrand y de ADP para México en Rent-A-Center. Colaboración con directivos y coordinación semanal con el equipo corporativo estadounidense en Rent-A-Center.</p><span class="project-note">Experiencia profesional · 2015–2024</span></article>
-<article class="project-card"><span class="project-type">CAPACITACIÓN DIGITAL</span><h3>Bibliotecas de cursos</h3><p>Participación en la creación de una biblioteca digital de formación en Grupo GP y actualización de la biblioteca de Soriana para alinearla con su rebranding corporativo.</p><span class="project-note">Experiencia profesional · 2011–2015</span></article>
-<article class="project-card"><span class="project-type">PROYECTO CONCEPTUAL</span><h3>Tueste Norte</h3><p>Identidad visual para una marca ficticia de café: logotipo, sistema gráfico y aplicaciones de empaque. Caso de estudio en preparación.</p><span class="project-note">Diseño de marca · En documentación</span></article>
-<article class="project-card"><span class="project-type">EN DESARROLLO</span><h3>Index: asistente personal</h3><p>Proyecto propio para aprender y desarrollar sistemas agénticos de organización y seguimiento personal. No es un producto comercial terminado.</p><span class="project-note">IA y agentes · En desarrollo</span></article>
-</div><div class="portfolio-bottom"><p>¿Buscas apoyo en aprendizaje digital o LMS?</p><a class="btn main-cta" href="mailto:a.fuentes0890@gmail.com?subject=Consulta%20sobre%20proyecto">Conversemos</a><a class="btn" href="cv.html">Ver CV interactivo</a></div>
+<article class="project-card"><span class="project-type">EXPERIENCIA CORPORATIVA</span><h3>Gestión de plataformas corporativas</h3><p>He administrado plataformas de recursos humanos y aprendizaje, como Cornerstone y ADP. En Logrand y Rent-A-Center fui administrador principal y trabajé con responsables de distintas áreas. En Rent-A-Center también coordinaba semanalmente con el equipo de Estados Unidos.</p><span class="project-note">Experiencia profesional · 2015–2024</span></article>
+<article class="project-card"><span class="project-type">CAPACITACIÓN DIGITAL</span><h3>Bibliotecas de cursos</h3><p>En Grupo GP participé en la creación de una biblioteca digital de cursos. En Soriana trabajé en la actualización de la biblioteca de capacitación para adaptarla a la nueva identidad visual de la empresa.</p><span class="project-note">Experiencia profesional · 2011–2015</span></article>
+<article class="project-card"><span class="project-type">PROYECTO CONCEPTUAL</span><h3>Tueste Norte</h3><p>Proyecto de identidad para una marca ficticia de café. Trabajé el logotipo, los colores y las aplicaciones de empaque. Estoy preparando el caso de estudio.</p><span class="project-note">Diseño de marca · En documentación</span></article>
+<article class="project-card"><span class="project-type">EN DESARROLLO</span><h3>Index: asistente personal</h3><p>Mi proyecto personal para aprender a construir asistentes con IA que ayuden a organizar tareas e información. Sigue en desarrollo.</p><span class="project-note">IA y agentes · En desarrollo</span></article>
+</div><div class="portfolio-bottom"><p>¿Tienes un proyecto de capacitación o necesitas apoyo con una plataforma?</p><a class="btn main-cta" href="mailto:a.fuentes0890@gmail.com?subject=Consulta%20sobre%20proyecto">Conversemos</a><a class="btn" href="cv.html">Ver CV interactivo</a></div>
 </section>
 
 <dialog id="contact-dlg" aria-labelledby="contact-t">
   <div class="in">
-    <h2 id="contact-t">¿Necesitas atención directa?</h2>
+    <h2 id="contact-t">¿Platicamos de tu proyecto?</h2>
     <div class="acts">
-      <!-- Cambia el número aquí si lo necesitas -->
+      
       <a class="btn" href="https://wa.me/528122201887?text=Hola%20Orlando%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo." target="_blank" rel="noopener">WhatsApp</a>
     </div>
-    <p style="margin-top:1.2rem">¿Eres tímido? Mándame un correo:</p>
+    <p style="margin-top:1.2rem">También puedes escribirme por correo:</p>
     <p><a class="mail" href="mailto:a.fuentes0890@gmail.com">a.fuentes0890@gmail.com</a></p>
     <div class="acts" style="margin-top:.7rem">
       <button type="button" class="btn ghost" id="copy-mail" aria-live="polite">Copiar correo</button>
@@ -200,20 +202,12 @@ html{scroll-behavior:smooth}body{height:auto;min-height:100%;overflow-x:hidden;o
   </div>
 </dialog>
 
-<dialog id="soon" aria-labelledby="soon-t">
-  <div class="in">
-    <h2 id="soon-t">Estoy trabajando en ello</h2>
-    <p>Pronto estará disponible.</p>
-    <button type="button" class="btn" id="soon-close" autofocus>Entendido</button>
-  </div>
-</dialog>
-
 <script>
 const data=[
- {t:"Diseño instruccional",p:"Cursos digitales, actividades interactivas y materiales para equipos operativos, administrativos y líderes.",c:["E-learning","Articulate","Capacitación"],a:"var(--blue)",o:"#fff"},
- {t:"Administración LMS",p:"Experiencia como administrador principal de Cornerstone en Logrand y ADP para México en Rent-A-Center.",c:["Cornerstone","ADP","LMS"],a:"var(--tang)",o:"var(--ink)"},
- {t:"Soluciones digitales",p:"Diseño web, comunicación interna y herramientas digitales para necesidades concretas. Aprendizaje en sistemas agénticos e IA.",c:["Web","Multimedia","IA en desarrollo"],a:"var(--lime)",o:"var(--ink)"},
- {t:"Proyectos",p:"Experiencia corporativa, diseño de marca y proyectos personales, distinguiendo trabajo realizado de iniciativas en construcción.",c:["Capacitación","Diseño","Prototipos"],a:"var(--pink)",o:"var(--ink)"}
+ {t:"Diseño instruccional",p:"Desarrollo cursos y materiales para que las personas puedan aprender y aplicar lo que necesitan en su trabajo.",c:["E-learning","Articulate","Capacitación"],a:"var(--blue)",o:"#fff"},
+ {t:"Plataformas corporativas",p:"He sido administrador principal de sistemas para recursos humanos y aprendizaje, como Cornerstone y ADP.",c:["Capacitación","Administración","Reportes"],a:"var(--tang)",o:"var(--ink)"},
+ {t:"Soluciones digitales",p:"Combino diseño, desarrollo web y comunicación interna. También estoy aprendiendo a crear herramientas con IA.",c:["Web","Multimedia","IA en desarrollo"],a:"var(--lime)",o:"var(--ink)"},
+ {t:"Proyectos",p:"Comparto trabajos corporativos, proyectos de diseño y cosas que estoy construyendo por mi cuenta.",c:["Capacitación","Diseño","Prototipos"],a:"var(--pink)",o:"var(--ink)"}
 ];
 const tabs=[...document.querySelectorAll('.tab')],panel=document.getElementById('panel');
 function show(i){
@@ -223,7 +217,7 @@ function show(i){
   panel.style.setProperty('--a',d.a);panel.style.setProperty('--o',d.o);
   panel.querySelector('h2').textContent=d.t;
   panel.querySelector('p').textContent=d.p;
-  panel.querySelector('.chips').innerHTML=d.c.map(x=>'<li>'+x+'</li>').join('');
+  panel.querySelector('.chips').replaceChildren(...d.c.map(label=>{const item=document.createElement('li');item.textContent=label;return item;}));
 }
 tabs.forEach((b,i)=>{
   b.addEventListener('click',()=>show(i));
