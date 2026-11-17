@@ -34,16 +34,16 @@ body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:
 @keyframes spin{to{transform:rotate(360deg)}}
 h1{font-family:var(--display);font-weight:800;font-size:clamp(2rem,min(6vw,9.5vh),5.2rem);line-height:.95;letter-spacing:-.04em}
 .role{font-family:var(--display);font-weight:800;font-size:clamp(1rem,2.6vh,1.5rem);line-height:1.1;letter-spacing:-.02em;max-width:26ch}
-.lead{max-width:44ch}
+.lead{max-width:44ch}.profile-links{display:flex;gap:.5rem;flex-wrap:wrap}.profile-links a{font-weight:700;color:var(--ink);text-underline-offset:3px}
 .langs{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0}
 .langs li{background:var(--lime);border:2px solid var(--ink);border-radius:99px;padding:.15rem .8rem;font-weight:700;font-size:.88em}
 
 .side{display:flex;flex-direction:column;justify-content:center;gap:clamp(.6rem,1.6vh,1rem);min-height:0}
-.tlrow{display:flex;align-items:flex-start;gap:.8rem}
+.tlrow{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}.tl-hint{font-size:.78rem;font-weight:700;opacity:.7}
 .tl{position:relative;display:flex;justify-content:space-between;flex:1;--p:0}
 .tl::before,.tl::after{content:"";position:absolute;top:18px;left:22px;height:4px;border-radius:2px;transform:translateY(-50%)}
 .tl::before{right:22px;background:var(--ink);opacity:.18}
-.tl::after{width:calc((100% - 44px) * var(--p));background:var(--ink);transition:width .7s cubic-bezier(.3,1.3,.4,1)}
+.tl::after{width:calc((100% - 44px) * var(--p));background:var(--ink);transition:width .3s ease}
 .node{position:relative;z-index:1;background:none;border:0;display:flex;flex-direction:column;align-items:center;gap:.2rem;min-width:44px;min-height:44px;padding:.5rem .2rem 0;cursor:pointer;font:700 .9rem var(--body);color:var(--ink)}
 .node i{width:20px;height:20px;border-radius:50%;border:3px solid var(--ink);background:#fff;transition:transform .3s cubic-bezier(.3,1.6,.4,1),background .3s}
 .node.done i{background:var(--ink)}
@@ -55,7 +55,7 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(2rem,min(6vw,9.5vh
 .panel.on{visibility:visible;opacity:1}
 .panel h2{font-family:var(--display);font-weight:800;font-size:clamp(1.3rem,3.4vh,2rem);line-height:1;letter-spacing:-.03em}
 .panel .org{font-weight:700;font-size:.92em}
-.panel ul{padding-left:1.1rem;display:grid;gap:.25rem}
+.panel ul{padding-left:1.1rem;display:grid;gap:.25rem}.panel li{line-height:1.45}
 .panel.swap{animation:swap .6s ease-in-out}
 .panel.swap>*{animation:inFade .4s .12s both}
 @keyframes swap{35%{transform:scale(.97,1.04);border-radius:46% 54% 44% 56% / 52% 46% 54% 48%}100%{transform:none}}
@@ -84,8 +84,9 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(2rem,min(6vw,9.5vh
   .langs{grid-column:1/-1}
   .side{justify-content:flex-start}
   .panel{box-shadow:4px 4px 0 var(--ink);font-size:.9rem}
-  .tools{gap:.05rem .8rem}
+  .tools{grid-template-columns:1fr;gap:.18rem}
   .skills{font-size:.88rem}
+  .tl-hint{display:none}
 }
 @media (prefers-reduced-motion:reduce){.ring{animation:none}*{transition:none!important}.panel.swap,.panel.swap>*{animation:none!important}}
 </style>
@@ -109,15 +110,16 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(2rem,min(6vw,9.5vh
         </svg>
       </div>
       <h1>Orlando Fuentes</h1>
-      <p class="role">Diseño instruccional · Plataformas de RR. HH. y aprendizaje</p>
-      <p class="lead">Mi experiencia combina diseño instruccional, capacitación digital y administración principal de plataformas corporativas de recursos humanos y aprendizaje. He trabajado con directivos y equipos de distintas áreas para organizar la capacitación y resolver necesidades concretas.</p>
-      <ul class="langs"><li>Inglés · Negocios</li><li>Español · Nativo</li></ul>
+      <p class="role">Diseñador instruccional · Administración de plataformas de aprendizaje</p>
+      <p class="lead">Soy diseñador instruccional con más de una década de experiencia en capacitación digital. He desarrollado cursos, administrado plataformas corporativas de aprendizaje y trabajado con distintas áreas para resolver necesidades de capacitación. También tengo experiencia en diseño multimedia y desarrollo web.</p>
+      <ul class="langs"><li>Inglés para comunicación profesional</li><li>Español nativo</li></ul>
+      <nav class="profile-links" aria-label="Enlaces profesionales"><a href="https://www.linkedin.com/in/orlando-fuentes-63674822/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:a.fuentes0890@gmail.com?subject=Solicitud%20de%20CV%20en%20PDF">Solicitar CV PDF</a></nav>
     </section>
 
     <section class="side" aria-label="Experiencia y habilidades">
       <div class="tlrow">
         <div class="tl" id="tl" role="tablist" aria-label="Línea de tiempo profesional"></div>
-        <button type="button" class="btn sm" id="play" aria-pressed="false">Pausar</button>
+        <span class="tl-hint">Elige una etapa</span>
       </div>
       <div class="stack" id="stack"></div>
       <div class="skills">
@@ -130,16 +132,35 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(2rem,min(6vw,9.5vh
 
 <script>
 const data=[
- {y:'2007',t:'Facultad de Artes Visuales',o:'2007 – 2011',a:'#fff',k:'var(--ink)',b:['Lic. Diseño Gráfico']},
- {y:'2011',t:'Diseñador Digital',o:'Grupo GP · 2011 – 2014',a:'var(--tang)',k:'var(--ink)',b:['Colaboración con el departamento de capacitación en la creación de una nueva biblioteca digital de cursos e-learning.','Diseño de contenidos digitales para comunicación interna y materiales de formación.']},
- {y:'2014',t:'Diseñador de materiales',o:'Soriana · 2014 – 2015',a:'var(--pink)',k:'var(--ink)',b:['Actualización de la biblioteca de cursos de capacitación de Soriana para alinear sus materiales con la identidad visual del rebranding corporativo.','Diseño de materiales digitales y producción de video para comunicación y capacitación internas.']},
- {y:'2015',t:'Diseño e-learning y administración de plataforma LMS',o:'Logrand Entertainment Group · 2015 – 2019',a:'var(--lime)',k:'var(--ink)',b:['Administrador principal de una plataforma corporativa de aprendizaje y desarrollo del talento (Cornerstone), en coordinación con distintas áreas de la empresa.','Trabajo directo con directores de distintas áreas para administrar la plataforma y atender necesidades de capacitación.','Participación en la creación de la identidad visual de la plataforma, alineada con el rebranding de Logrand.','Desarrollo de materiales e-learning y trabajo en la experiencia digital de capacitación.']},
- {y:'2019',t:'Diseñador Instruccional',o:'Rent-A-Center · 2019 – 2024',a:'var(--blue)',k:'#fff',b:['Desarrollo de cursos digitales para personal operativo, administrativo, gerencial y de nuevo ingreso, implementados en múltiples sucursales de México.','Administrador principal para México de una plataforma corporativa de recursos humanos y capacitación (ADP); formación en el corporativo de Estados Unidos y coordinación semanal con ese equipo.','Participación en el ciclo completo de e-learning: organización didáctica, diseño multimedia, actividades interactivas, evaluaciones y publicación en LMS.','Desarrollo de herramientas web y mejoras que la empresa adoptó para facilitar la capacitación y el trabajo entre áreas.','Colaboración con equipos corporativos y coordinación de revisiones y aprobaciones con distintas áreas.','Proyectos reconocidos por gerentes y responsables de capacitación por su utilidad y mejoras a los materiales.']},
- {y:'2025',t:'Fundador · Desarrollo digital y comercial',o:'BENOM México · 2025 – 2026',a:'var(--tang)',k:'var(--ink)',b:['Puesta en marcha de una iniciativa comercial de productos y suministros médicos con clientes reales.','Creación y gestión de tienda virtual y catálogo digital de productos.','Desarrollo directo de materiales gráficos, contenidos comerciales y acciones de marketing.','Atención comercial y gestión de relaciones con clientes y proveedores.']}
+ {y:'2025',t:'Fundador · Desarrollo digital y comercial',o:'BENOM México · 2025–2026',a:'var(--tang)',k:'var(--ink)',b:[
+  'Participé en la operación de un negocio de suministros médicos y gestioné su tienda virtual y catálogo digital.',
+  'Desarrollé materiales comerciales, acciones de marketing y la comunicación con clientes y proveedores.'
+ ]},
+ {y:'2019',t:'Diseñador Instruccional',o:'Rent-A-Center · 2019–2024',a:'var(--blue)',k:'#fff',b:[
+  'Desarrollé cursos e-learning para personal operativo, administrativo, gerencial y de nuevo ingreso en sucursales de México.',
+  'Fui administrador principal en México de una plataforma corporativa de recursos humanos y capacitación (ADP). Recibí formación en el corporativo de Estados Unidos y mantuve coordinación semanal con su equipo.',
+  'Participé en el desarrollo completo de cursos: estructura, contenido multimedia, actividades, evaluaciones y publicación en plataformas de aprendizaje.',
+  'Propuse mejoras y desarrollé herramientas digitales adoptadas por la empresa, en colaboración con responsables de distintas áreas.'
+ ]},
+ {y:'2015',t:'Diseñador Instruccional',o:'Logrand Entertainment Group · 2015–2019',a:'var(--lime)',k:'var(--ink)',b:[
+  'Fui administrador principal de la plataforma de aprendizaje corporativo Cornerstone.',
+  'Trabajé con directores de distintas áreas para atender necesidades de capacitación y administración de la plataforma.',
+  'Participé en la adaptación de su identidad visual durante el cambio de imagen de Logrand.',
+  'Desarrollé materiales digitales para programas de capacitación.'
+ ]},
+ {y:'2014',t:'Diseñador de materiales',o:'Soriana · 2014–2015',a:'var(--pink)',k:'var(--ink)',b:[
+  'Participé en la actualización de la biblioteca de cursos de capacitación, adaptando sus materiales a la nueva identidad visual de Soriana.',
+  'Diseñé materiales digitales y produje videos para comunicación y capacitación internas.'
+ ]},
+ {y:'2011',t:'Diseñador Digital',o:'Grupo GP · 2011–2014',a:'var(--tang)',k:'var(--ink)',b:[
+  'Colaboré con el departamento de capacitación en la creación de una biblioteca digital de cursos.',
+  'Diseñé materiales de comunicación interna y contenidos de e-learning.'
+ ]},
+ {y:'2007',t:'Formación en Diseño Gráfico',o:'Facultad de Artes Visuales · 2007–2011',a:'#fff',k:'var(--ink)',b:['Licenciatura en Diseño Gráfico.']}
 ];
-const tools=['Articulate Storyline / Rise','Plataformas LMS y RR. HH. (Cornerstone, ADP)','Adobe Illustrator','Adobe Photoshop','Adobe Premiere','Adobe After Effects','HTML / CSS','Microsoft 365'];
-const ia=['Herramientas de IA en aprendizaje','Comercio electrónico'];
-const soft=['Diseño instruccional','Administración de plataformas','Capacitación corporativa','E-learning','Trabajo con equipos directivos','Comunicación interna','Desarrollo web','Diseño multimedia'];
+const tools=['Plataformas LMS y de RR. HH. (p. ej., Cornerstone y ADP)','Articulate Storyline / Rise','Adobe Illustrator y Photoshop','Adobe Premiere y After Effects','HTML / CSS','Microsoft 365'];
+const ia=['Comercio electrónico'];
+const soft=['Capacitación corporativa','Administración de sistemas de aprendizaje','Diseño instruccional','Coordinación entre áreas','Comunicación interna','Desarrollo web','Diseño multimedia'];
 
 document.getElementById('tools').replaceChildren(...tools.map(name=>{const li=document.createElement('li');li.textContent=name;return li;}));
 document.getElementById('soft').replaceChildren(...[...ia.map(label=>({label,ia:true})),...soft.map(label=>({label,ia:false}))].map(entry=>{const li=document.createElement('li');li.textContent=entry.label;if(entry.ia)li.className='ia';return li;}));
@@ -149,39 +170,41 @@ data.forEach((d,i)=>{
   tl.insertAdjacentHTML('beforeend',`<button type="button" class="node" role="tab" id="n${i}" aria-controls="p${i}" aria-selected="false" aria-label="${d.y}: ${d.t}, ${d.o}" tabindex="-1" style="--a:${d.a}"><i></i>${d.y}</button>`);
   stack.insertAdjacentHTML('beforeend',`<article class="panel" role="tabpanel" id="p${i}" aria-labelledby="n${i}" style="--a:${d.a};--o:${d.k}" inert><h2>${d.t}</h2><p class="org">${d.o}</p><ul>${d.b.map(x=>`<li>${x}</li>`).join('')}</ul></article>`);
 });
-const nodes=[...tl.children],panels=[...stack.children],pb=document.getElementById('play');
+const nodes=[...tl.children];
+const panels=[...stack.children];
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-let cur=0,timer,playing=!reduce;
 
 function show(i){
-  cur=i;
-  nodes.forEach((n,k)=>{n.setAttribute('aria-selected',k===i);n.tabIndex=k===i?0:-1;n.classList.toggle('done',k<i)});
-  panels.forEach((p,k)=>{p.classList.toggle('on',k===i);p.inert=k!==i;p.classList.remove('swap')});
-  void panels[i].offsetWidth;
-  panels[i].classList.add('swap');
-  tl.style.setProperty('--p',i/(data.length-1));
+  nodes.forEach((node,k)=>{
+    const selected=k===i;
+    node.setAttribute('aria-selected',String(selected));
+    node.tabIndex=selected?0:-1;
+    node.classList.toggle('done',k>i);
+  });
+  panels.forEach((panel,k)=>{
+    const visible=k===i;
+    panel.classList.toggle('on',visible);
+    panel.inert=!visible;
+    panel.classList.remove('swap');
+  });
+  if(!reduce){
+    void panels[i].offsetWidth;
+    panels[i].classList.add('swap');
+  }
+  tl.style.setProperty('--p',(data.length-1-i)/(data.length-1));
 }
-function tick(){
-  clearTimeout(timer);
-  if(!playing)return;
-  timer=setTimeout(()=>{show((cur+1)%data.length);tick()},6000);
-}
-function setPlay(v){
-  playing=v;
-  pb.textContent=v?'Pausar':'Reanudar';
-  pb.setAttribute('aria-pressed',String(!v));
-  if(v)tick();else clearTimeout(timer);
-}
-nodes.forEach((n,i)=>{
-  n.addEventListener('click',()=>{show(i);setPlay(false)});
-  n.addEventListener('keydown',e=>{
-    const k={ArrowRight:1,ArrowDown:1,ArrowLeft:-1,ArrowUp:-1}[e.key];
-    if(k){e.preventDefault();const m=(i+k+nodes.length)%nodes.length;show(m);setPlay(false);nodes[m].focus()}
+nodes.forEach((node,i)=>{
+  node.addEventListener('click',()=>show(i));
+  node.addEventListener('keydown',event=>{
+    const delta={ArrowRight:1,ArrowDown:1,ArrowLeft:-1,ArrowUp:-1}[event.key];
+    if(!delta)return;
+    event.preventDefault();
+    const next=(i+delta+nodes.length)%nodes.length;
+    show(next);
+    nodes[next].focus();
   });
 });
-pb.addEventListener('click',()=>setPlay(!playing));
-show(0);
-setPlay(playing);
+show(1);
 </script>
 </body>
 </html>
