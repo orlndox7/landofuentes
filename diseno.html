@@ -1,65 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f8ff">
 <title>Diseño e identidad visual | Orlando Fuentes</title>
-<meta name="description" content="Exploraciones de diseño e identidad visual de Orlando Fuentes. Proyectos conceptuales diferenciados de la experiencia profesional.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#1B1740;--paper:#EFEBFF;--blue:#3D4DFF;--tang:#FF6B3D;--lime:#D4F25C;--display:"Bricolage Grotesque","Arial Black",sans-serif;--body:"DM Sans",system-ui,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.55 var(--body)}
-a{color:inherit}:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
-.wrap{max-width:1150px;margin:auto;padding:clamp(1rem,3vw,2rem)}
-header{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
-.logo{font:800 1.25rem var(--display);text-decoration:none}.back,.action{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.55rem 1.1rem;border:2px solid var(--ink);border-radius:99px;font-weight:700;text-decoration:none;background:#fff}
-.back:hover,.action:hover{transform:translateY(-2px)}
-main{padding-top:clamp(3rem,9vw,7rem);padding-bottom:3rem}
-.kicker,.eyebrow{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800}
-h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.04em}
-h1{font-size:clamp(2.7rem,7vw,6rem);max-width:14ch;margin:.55rem 0 1.2rem}
-.lead{font-size:clamp(1.05rem,2vw,1.3rem);max-width:62ch}
-.note{display:inline-block;margin-top:1rem;padding:.6rem .9rem;border-radius:12px;background:#fff;border:1.5px solid var(--ink);font-weight:700}
-.case{margin:clamp(3rem,7vw,6rem) 0 2rem;padding:clamp(1.5rem,4vw,3.5rem);border:2px solid var(--ink);border-radius:26px;background:#fff;box-shadow:7px 7px 0 var(--ink)}
-.case-head{display:flex;justify-content:space-between;align-items:start;gap:1rem;flex-wrap:wrap}
-.case h2{font-size:clamp(2.2rem,5vw,4rem);margin:.5rem 0}
-.pill{display:inline-flex;background:var(--lime);border:2px solid var(--ink);border-radius:99px;padding:.35rem .8rem;font-weight:800;font-size:.82rem}
-.case p{max-width:70ch}
-.details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2rem}
-.details article{padding:1.3rem;border:2px solid var(--ink);border-radius:18px;background:var(--paper)}
-.details article:nth-child(2){background:#ffe3d9}.details article:nth-child(3){background:#e4f0b0}
-.details h3{font-size:1.2rem;margin:.15rem 0 .6rem}
-.details p{margin:0;font-size:.95rem}
-.disclaimer{margin-top:1.7rem;padding-top:1.2rem;border-top:1px solid #c5bee1;font-size:.93rem}
-.bottom{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin:2.5rem 0 0}
-.action{background:var(--tang);box-shadow:4px 4px 0 var(--ink)}
-footer{border-top:1px solid #bbb1de;padding:1.5rem 0 2.5rem;font-size:.9rem}
-@media(max-width:720px){.details{grid-template-columns:1fr}.case{box-shadow:4px 4px 0 var(--ink)}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-</style>
-</head>
-<body>
-<div class="wrap">
-<header><a class="logo" href="index.html">Orlando Fuentes</a><a class="back" href="index.html">Volver a la página principal</a></header>
+<meta name="description" content="Portafolio complementario de diseño e identidad visual de Orlando Fuentes. Incluye Tueste Norte, proyecto conceptual de marca ficticia, claramente identificado como ejercicio personal.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css"></head><body>
+<header class="site-header"><nav class="shell nav-wrap" aria-label="Navegación principal">
+<a class="brand" href="index.html"><span class="brand-symbol">OF</span> Orlando Fuentes</a>
+<button class="menu-toggle" type="button" data-menu-toggle aria-controls="nav-links" aria-expanded="false">Menú</button>
+<ul id="nav-links" class="nav-links" data-nav-links><li><a href="index.html">Inicio</a></li><li><a href="cv.html">CV / Trayectoria</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="diseno.html">Diseño visual</a></li><li><a href="laboratorio.html">Laboratorio IA</a></li><li><a class="nav-contact" href="contacto.html">Contacto</a></li></ul></nav></header>
 <main>
-  <p class="kicker">Portafolio complementario</p>
-  <h1>Diseño e identidad visual.</h1>
-  <p class="lead">Además de mi trabajo en capacitación y soluciones digitales, exploro la creación de identidades de marca: desde el concepto hasta las aplicaciones visuales. Los ejercicios de esta página están identificados como tales y no se presentan como encargos de clientes.</p>
-  <section class="case" aria-labelledby="tn-title">
-    <div class="case-head"><div><p class="eyebrow">Ejercicio de identidad de marca</p><h2 id="tn-title">Tueste Norte</h2></div><span class="pill">Proyecto conceptual · marca ficticia</span></div>
-    <p>Concepto visual para una tostaduría de café ficticia de Monterrey. El ejercicio parte de una marca artesanal, directa y cercana, y explora cómo darle una expresión gráfica consistente.</p>
-    <div class="details">
-      <article><h3>Concepto</h3><p>Definición de personalidad, dirección visual y tono de una marca de café.</p></article>
-      <article><h3>Identidad</h3><p>Exploración de logotipo, tipografía y un sistema de color reducido.</p></article>
-      <article><h3>Aplicaciones</h3><p>Propuestas de empaque y otras piezas de presentación de marca.</p></article>
-    </div>
-    <p class="disclaimer"><strong>Transparencia:</strong> Tueste Norte es un ejercicio personal de diseño; no es una empresa cliente ni una marca comercial operada por mí. Las piezas gráficas definitivas se incorporarán como una galería visual cuando esté lista la documentación del caso.</p>
-  </section>
-  <div class="bottom"><p>¿Buscas apoyo con identidad visual o materiales de comunicación?</p><a class="action" href="mailto:a.fuentes0890@gmail.com?subject=Consulta%20sobre%20dise%C3%B1o%20de%20identidad%20visual">Hablemos de tu proyecto</a></div>
-</main>
-<footer>Orlando Fuentes · Diseño instruccional, capacitación corporativa e identidad visual. <a href="cv.html">Ver trayectoria profesional</a></footer>
+<section class="page-hero"><div class="shell"><div class="narrow">
+<div class="breadcrumb"><a href="index.html">Inicio</a><span>›</span><span>Diseño e identidad visual</span></div>
+<span class="eyebrow"><span class="line"></span> 03 · Portafolio complementario</span>
+<h1>Diseño e identidad visual.</h1>
+<p class="lead">También desarrollo ejercicios de <strong>identidad de marca, diseño gráfico y comunicación visual</strong>. Esta disciplina complementa mi experiencia en capacitación y materiales multimedia, sin desplazarla como especialidad principal.</p>
+<p class="media-note">Los proyectos ficticios se identifican como ejercicios conceptuales. No se presentan como trabajos contratados.</p>
+</div></div></section>
+<section class="section section-muted"><div class="shell">
+<div class="section-head"><span class="eyebrow"><span class="line"></span> Estudio conceptual</span><h2>Tueste Norte.</h2><p>Un ejercicio de identidad visual para explorar cómo construir un sistema de marca coherente a partir de un concepto ficticio.</p></div>
+<div class="case-grid">
+<div class="case-cover" role="img" aria-label="Tarjeta tipográfica ilustrativa del proyecto conceptual Tueste Norte, no una reproducción del logotipo definitivo">
+<div class="case-sub">EJERCICIO DE IDENTIDAD · MARCA FICTICIA</div>
+<div class="case-mark">TUESTE<br>NORTE</div>
+<div class="case-sub">CAFÉ · CONCEPTO VISUAL</div>
 </div>
-</body>
-</html>
+<div>
+<span class="tag">Proyecto conceptual · No comercial</span>
+<h3>Una marca artesanal, directa y cercana.</h3>
+<p>Tueste Norte es una marca ficticia de café pensada para Monterrey. El ejercicio explora personalidad, lenguaje visual y aplicaciones de empaque.</p>
+<p><strong>Aspectos trabajados:</strong> concepto y posicionamiento, exploración tipográfica, logotipo, paleta de color y propuestas de aplicación visual.</p>
+<p><strong>Estado:</strong> la documentación y la galería con las piezas originales siguen en preparación. La tarjeta contigua es una representación tipográfica de esta página, no el logotipo definitivo.</p>
+<div class="actions"><a class="btn btn-secondary" href="contacto.html">Consultar sobre diseño visual</a></div>
+</div>
+</div>
+<div class="note-box" style="margin-top:1.6rem"><strong>Sobre el carácter de este caso</strong>No existe un cliente real llamado Tueste Norte en este proyecto y no se atribuyen resultados comerciales. Este apartado muestra exploración creativa y criterios de diseño.</div>
+</div></section>
+<section class="section"><div class="shell">
+<div class="section-head"><span class="eyebrow"><span class="line"></span> Capacidades complementarias</span><h2>Más que un logotipo.</h2><p>Una identidad visual reúne decisiones que deben funcionar juntas, no solamente un símbolo aislado.</p></div>
+<div class="feature-grid">
+<article class="feature-card"><span class="index">01 · Dirección visual</span><h3>Concepto y personalidad</h3><p>Definición de atributos, referencias y dirección gráfica para orientar las piezas de una marca.</p></article>
+<article class="feature-card"><span class="index">02 · Sistema visual</span><h3>Tipografía y color</h3><p>Exploración de logotipo, jerarquía tipográfica y paletas que permitan aplicaciones consistentes.</p></article>
+<article class="feature-card"><span class="index">03 · Aplicaciones</span><h3>Piezas y materiales</h3><p>Adaptación de la identidad a soportes de comunicación, empaques y presentaciones.</p></article>
+</div>
+</div></section>
+<section class="section section-tight"><div class="shell"><div class="contact-band"><div><span class="eyebrow" style="color:#c9b7ff">Servicio complementario</span><h2>¿Necesitas apoyo con identidad visual?</h2><p>Podemos evaluar el proyecto, los materiales disponibles y el alcance antes de definir entregables.</p></div><a class="btn" href="contacto.html">Conversar sobre diseño ↗</a></div></div></section>
+</main>
+<footer class="site-footer"><div class="shell footer-row"><span>© 2026 Orlando Fuentes · Identidad visual</span><div class="footer-links"><a href="index.html">Inicio</a><a href="cv.html">Trayectoria</a><a href="servicios.html">Servicios</a></div></div></footer>
+<script src="site.js" defer></script>
+</body></html>
