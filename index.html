@@ -117,8 +117,26 @@ body{height:auto;min-height:100%;overflow-x:hidden;overflow-y:auto}
 .project-card:nth-child(2){background:var(--lime)}.project-card:nth-child(3){background:#ffe2d8}.project-card:nth-child(4){background:#f2e6ff}
 .project-card h3{font:800 clamp(1.2rem,2vw,1.7rem)/1.12 var(--display)}.project-card p{line-height:1.55;max-width:62ch}.project-note{margin-top:auto;opacity:.75}
 .portfolio-bottom{display:flex;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:2rem}.portfolio-bottom p{font-weight:700;margin-right:auto}
-.secondary-work{margin-top:2.3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:1.35rem 1.5rem;border:2px solid var(--ink);border-radius:20px;background:#fff}.secondary-work h3{font:800 clamp(1.2rem,2vw,1.6rem)/1.15 var(--display);margin:.4rem 0}.secondary-work p:not(.eyebrow){max-width:65ch;line-height:1.5}
 @media(max-width:820px){.stage{min-height:100dvh;display:flex;flex-direction:column;gap:1.25rem}.main{display:flex;flex-direction:column;gap:1.8rem;flex:1}.hero,.side{min-height:unset}.hero{padding-top:1rem}.foot{flex-wrap:wrap;margin-top:auto}.project-grid{grid-template-columns:1fr}.sticker{opacity:.65}.portfolio-bottom{align-items:stretch}}
+
+/* Jerarquía de experiencia y proyectos complementarios */
+.portfolio-primary{padding-bottom:clamp(2rem,5vw,4rem)}
+.portfolio-tech{padding-top:clamp(2rem,5vw,3rem);padding-bottom:clamp(2rem,5vw,4rem)}
+.portfolio-complementary{padding-top:clamp(2rem,5vw,3rem)}
+.portfolio-head .num{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;border:2px solid var(--ink);background:var(--lime);width:2.5rem;height:2.5rem;margin-right:.45rem;letter-spacing:0;font-size:.95rem}
+.portfolio-tech .num{background:var(--tang)}
+.project-card-wide{grid-column:1/-1;max-width:none}
+.portfolio-tech .project-card:nth-child(1){background:#fff}
+.portfolio-tech .project-card:nth-child(2){background:#e6f3c2}
+.portfolio-complementary .compact-head h2{font-size:clamp(1.65rem,3vw,2.5rem)}
+.minor-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.minor-card{display:flex;flex-direction:column;align-items:flex-start;gap:.7rem;border:1.5px solid #a6a0c0;border-radius:18px;background:rgba(255,255,255,.72);padding:clamp(1.2rem,2.5vw,1.8rem)}
+.minor-card h3{font:800 clamp(1.2rem,2.1vw,1.65rem)/1.15 var(--display)}
+.minor-card p{line-height:1.55}
+.minor-index{font-size:.76rem;font-weight:800;letter-spacing:.06em}
+.minor-card a{margin-top:auto;font-weight:800;text-underline-offset:4px}
+.minor-lab{background:rgba(255,255,255,.5)}
+@media(max-width:820px){.project-card-wide{grid-column:auto}.minor-grid{grid-template-columns:1fr}.portfolio-head .num{width:2.1rem;height:2.1rem}}
 </style>
 </head>
 <body>
@@ -151,11 +169,11 @@ body{height:auto;min-height:100%;overflow-x:hidden;overflow-y:auto}
       <svg class="blob" viewBox="0 0 500 500" aria-hidden="true"><path d="M421 322Q380 420 270 424T120 330Q60 240 130 150T300 70Q420 90 440 200T421 322Z" fill="#fff" opacity=".7"/></svg>
       <svg class="spark" style="right:-1%;top:-3%;width:46px" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C54 30 70 46 100 50 70 54 54 70 50 100 46 70 30 54 0 50 30 46 46 30 50 0Z" fill="#FF9ED0" stroke="#1B1740" stroke-width="4"/></svg>
 
-      <div class="tabs" role="tablist" aria-label="Servicios">
+      <div class="tabs" role="tablist" aria-label="Áreas de experiencia">
         <button class="tab" role="tab" id="t0" aria-selected="true" aria-controls="panel" style="--a:var(--blue);--o:#fff">Diseño instruccional</button>
         <button class="tab" role="tab" id="t1" aria-selected="false" aria-controls="panel" tabindex="-1" style="--a:var(--tang);--o:var(--ink)">Coordinación</button>
-        <button class="tab" role="tab" id="t2" aria-selected="false" aria-controls="panel" tabindex="-1" style="--a:var(--lime);--o:var(--ink)">Plataformas LMS</button>
-        <button class="tab" role="tab" id="t3" aria-selected="false" aria-controls="panel" tabindex="-1" style="--a:var(--pink);--o:var(--ink)">Soluciones digitales</button>
+        <button class="tab" role="tab" id="t2" aria-selected="false" aria-controls="panel" tabindex="-1" style="--a:var(--lime);--o:var(--ink)">LMS y tecnología</button>
+        <button class="tab" role="tab" id="t3" aria-selected="false" aria-controls="panel" tabindex="-1" style="--a:var(--pink);--o:var(--ink)">Evaluación y mejora</button>
       </div>
 
       <article class="panel" id="panel" role="tabpanel" aria-labelledby="t0" tabindex="0" style="--a:var(--blue);--o:#fff">
@@ -163,28 +181,67 @@ body{height:auto;min-height:100%;overflow-x:hidden;overflow-y:auto}
         <p></p>
         <ul class="chips"></ul>
         
-        <a class="link" href="#experiencia">Ver experiencia</a>
+        <a class="link" href="#experiencia">Ver áreas de experiencia</a>
       </article>
     </section>
   </div>
 
   <footer class="foot">
     
-    <button type="button" class="btn main-cta" id="contact">Escríbeme</button>
+    <button type="button" class="btn main-cta" id="contact">Hablemos de tu proyecto</button>
     <a class="btn" href="https://www.linkedin.com/in/orlando-fuentes-63674822/" target="_blank" rel="noopener">LinkedIn</a>
     <a class="btn" href="#experiencia">Experiencia</a>
     <a class="btn" href="mailto:a.fuentes0890@gmail.com?subject=Solicitud%20de%20CV%20en%20PDF">Solicitar CV PDF</a>
   </footer>
 </div>
 
-<section class="portfolio" id="experiencia" aria-labelledby="projects-title">
-<div class="portfolio-head"><p class="eyebrow">EXPERIENCIA PROFESIONAL</p><h2 id="projects-title">Capacitación de principio a fin.</h2><p>Mi experiencia incluye analizar necesidades, diseñar contenidos, coordinar su impartición, dar seguimiento a resultados y administrar plataformas corporativas. Por confidencialidad, describo mis responsabilidades sin compartir materiales internos.</p></div>
-<div class="project-grid">
-<article class="project-card"><span class="project-type">DISEÑO INSTRUCCIONAL</span><h3>Diseño y desarrollo de capacitación</h3><p>En Rent-A-Center participé en la detección de necesidades y desarrollé soluciones de aprendizaje digital, presencial y virtual, con materiales multimedia, actividades y evaluaciones para distintas áreas.</p><span class="project-note">Rent-A-Center · 2019–2024</span></article>
-<article class="project-card"><span class="project-type">CAPACITACIÓN CORPORATIVA</span><h3>Coordinación e impartición</h3><p>Participé en la planeación, organización e impartición de programas de capacitación. Coordiné agendas, sedes, logística, proveedores externos, materiales y colaboración con distintas áreas de la empresa.</p><span class="project-note">Rent-A-Center · 2019–2024</span></article>
-<article class="project-card"><span class="project-type">PLATAFORMAS LMS Y RR. HH.</span><h3>Administración de sistemas corporativos</h3><p>Fui administrador principal de Cornerstone en Logrand y de ADP para México en Rent-A-Center, donde ADP también funcionaba como LMS. Mantuve coordinación semanal con el equipo de Estados Unidos sobre funcionamiento, actualizaciones, lineamientos y reportes.</p><span class="project-note">Logrand y Rent-A-Center · 2015–2024</span></article>
-<article class="project-card"><span class="project-type">SEGUIMIENTO Y MEJORA</span><h3>Evaluación y soluciones digitales</h3><p>Participé en la implementación de reportes y mecanismos de seguimiento para monitorear la impartición y participación en programas de capacitación. También desarrollé herramientas digitales y propuse mejoras que fueron adoptadas por la empresa.</p><span class="project-note">Rent-A-Center · 2019–2024</span></article>
-</div><div class="portfolio-bottom"><p>¿Necesitas diseñar, coordinar o mejorar la capacitación de tu equipo?</p><a class="btn main-cta" href="mailto:a.fuentes0890@gmail.com?subject=Consulta%20sobre%20capacitaci%C3%B3n">Conversemos</a><a class="btn" href="cv.html">Ver CV interactivo</a></div><aside class="secondary-work"><div><p class="eyebrow">OTRA DISCIPLINA</p><h3>Diseño e identidad visual</h3><p>Una muestra separada de identidad visual y ejercicios de diseño, claramente diferenciados de mi trayectoria corporativa.</p></div><a class="btn" href="diseno.html">Explorar identidad visual</a></aside>
+
+<section class="portfolio portfolio-primary" id="experiencia" aria-labelledby="primary-title">
+  <div class="portfolio-head">
+    <p class="eyebrow"><span class="num">01</span> / ESPECIALIDAD PRINCIPAL</p>
+    <h2 id="primary-title">Capacitación de principio a fin.</h2>
+    <p>Participo en el análisis de necesidades, diseño, coordinación, impartición y evaluación de programas de aprendizaje. Mi experiencia incluye tanto formación digital como capacitación presencial y virtual.</p>
+  </div>
+  <div class="project-grid">
+    <article class="project-card"><span class="project-type">DISEÑO INSTRUCCIONAL</span><h3>De la necesidad al aprendizaje</h3><p>En Rent-A-Center participé en la detección de necesidades y diseñé cursos, contenidos multimedia, actividades y evaluaciones para distintas áreas y perfiles.</p><span class="project-note">Experiencia corporativa · 2019–2024</span></article>
+    <article class="project-card"><span class="project-type">COORDINACIÓN E IMPARTICIÓN</span><h3>Programas de capacitación</h3><p>Participé en la planeación e impartición de formación interna y en la coordinación de proveedores, agendas, sedes, logística y materiales de capacitación.</p><span class="project-note">Experiencia corporativa · 2019–2024</span></article>
+    <article class="project-card project-card-wide"><span class="project-type">EVALUACIÓN Y SEGUIMIENTO</span><h3>Seguimiento para apoyar la capacitación</h3><p>Participé en la implementación de reportes y mecanismos de seguimiento para monitorear la impartición y participación en los programas de capacitación, así como en su evaluación y mejora continua.</p><span class="project-note">Experiencia corporativa · 2019–2024</span></article>
+  </div>
+  <div class="portfolio-bottom"><p>¿Necesitas diseñar, coordinar o mejorar la capacitación de tu equipo?</p><a class="btn main-cta" href="mailto:a.fuentes0890@gmail.com?subject=Consulta%20sobre%20capacitaci%C3%B3n">Consultar un proyecto</a><a class="btn" href="cv.html">Ver trayectoria para reclutamiento</a></div>
+</section>
+
+<section class="portfolio portfolio-tech" id="tecnologia" aria-labelledby="tech-title">
+  <div class="portfolio-head">
+    <p class="eyebrow"><span class="num">02</span> / ESPECIALIZACIÓN TÉCNICA</p>
+    <h2 id="tech-title">Plataformas y soluciones digitales.</h2>
+    <p>La tecnología es una fortaleza que acompaña mi trabajo en capacitación: administración de sistemas, seguimiento y desarrollo de herramientas de apoyo.</p>
+  </div>
+  <div class="project-grid">
+    <article class="project-card"><span class="project-type">LMS Y SISTEMAS CORPORATIVOS</span><h3>Administración de plataformas</h3><p>Fui administrador principal de Cornerstone en Logrand y de ADP para México en Rent-A-Center. ADP era una plataforma de RR. HH. utilizada también como LMS. Coordinaba semanalmente con Estados Unidos el seguimiento a funcionamiento, actualizaciones, lineamientos y reportes.</p><span class="project-note">Logrand y Rent-A-Center · 2015–2024</span></article>
+    <article class="project-card"><span class="project-type">DESARROLLO Y MEJORA</span><h3>Herramientas que apoyan procesos</h3><p>Desarrollé herramientas digitales y materiales multimedia para apoyar procesos internos de capacitación. Algunas de las soluciones y mejoras propuestas fueron adoptadas por la empresa.</p><span class="project-note">Experiencia corporativa · Rent-A-Center</span></article>
+  </div>
+</section>
+
+<section class="portfolio portfolio-complementary" id="otras-areas" aria-labelledby="other-title">
+  <div class="portfolio-head compact-head">
+    <p class="eyebrow">OTRAS CAPACIDADES Y EXPLORACIONES</p>
+    <h2 id="other-title">Un espacio para seguir creando.</h2>
+    <p>Estas áreas complementan mi experiencia principal. Distingo los ejercicios conceptuales de los proyectos en desarrollo.</p>
+  </div>
+  <div class="minor-grid">
+    <article class="minor-card">
+      <span class="minor-index">03 · SERVICIO COMPLEMENTARIO</span>
+      <h3>Diseño e identidad visual</h3>
+      <p>Diseño gráfico, sistemas de marca y aplicaciones visuales. El portafolio complementario incluye ejercicios conceptuales identificados como tales.</p>
+      <a href="diseno.html">Explorar identidad visual</a>
+    </article>
+    <article class="minor-card minor-lab">
+      <span class="minor-index">04 · EN DESARROLLO</span>
+      <h3>IA y sistemas agénticos</h3>
+      <p>Aprendizaje y experimentación con asistentes y automatización. Index es un proyecto personal en desarrollo, no un producto comercial terminado.</p>
+      <a href="laboratorio.html">Conocer el laboratorio</a>
+    </article>
+  </div>
 </section>
 
 <dialog id="contact-dlg" aria-labelledby="contact-t">
@@ -206,10 +263,10 @@ body{height:auto;min-height:100%;overflow-x:hidden;overflow-y:auto}
 
 <script>
 const data=[
- {t:"Diseño instruccional",p:"Participo en la detección de necesidades y desarrollo contenidos, actividades y evaluaciones para modalidades digital, presencial y virtual.",c:["E-learning","Evaluación","Materiales"],a:"var(--blue)",o:"#fff"},
- {t:"Coordinación de capacitación",p:"He organizado e impartido programas de formación, coordinando proveedores, agendas, sedes, materiales y logística con distintas áreas.",c:["Planeación","Proveedores","Impartición"],a:"var(--tang)",o:"var(--ink)"},
- {t:"Plataformas LMS",p:"He sido administrador principal de Cornerstone y ADP, con funciones LMS, además de trabajar con reportes, seguimiento y equipos corporativos.",c:["Cornerstone","ADP / LMS","Reportes"],a:"var(--lime)",o:"var(--ink)"},
- {t:"Soluciones digitales",p:"He creado herramientas digitales de apoyo y materiales multimedia para procesos de capacitación. Además, desarrollo proyectos personales de tecnología.",c:["Desarrollo web","Multimedia","Herramientas"],a:"var(--pink)",o:"var(--ink)"}
+ {t:"Diseño instruccional",p:"Participo en la detección de necesidades y desarrollo contenidos, actividades y evaluaciones para capacitación digital, presencial y virtual.",c:["Diagnóstico","E-learning","Evaluación"],a:"var(--blue)",o:"#fff"},
+ {t:"Coordinación de capacitación",p:"He planeado, coordinado e impartido programas de capacitación con distintas áreas, proveedores externos y responsables de formación.",c:["Planeación","Proveedores","Impartición"],a:"var(--tang)",o:"var(--ink)"},
+ {t:"LMS y tecnología",p:"Fui administrador principal de Cornerstone en Logrand y de ADP en México para Rent-A-Center, donde también se utilizaba como LMS.",c:["Cornerstone","ADP / LMS","Reportes"],a:"var(--lime)",o:"var(--ink)"},
+ {t:"Evaluación y mejora",p:"He trabajado con evaluaciones, reportes y mecanismos de seguimiento para apoyar la impartición de capacitación, además de crear herramientas digitales.",c:["Seguimiento","Indicadores","Mejora"],a:"var(--pink)",o:"var(--ink)"}
 ];
 const tabs=[...document.querySelectorAll('.tab')],panel=document.getElementById('panel');
 function show(i){
