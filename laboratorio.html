@@ -1,57 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Laboratorio digital e IA | Orlando Fuentes</title>
-<meta name="description" content="Proyectos personales y exploraciones de Orlando Fuentes sobre asistentes de IA y sistemas agénticos. Trabajo en desarrollo, no productos comerciales terminados.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#1B1740;--paper:#EFEBFF;--blue:#3D4DFF;--tang:#FF6B3D;--lime:#D4F25C;--display:"Bricolage Grotesque","Arial Black",sans-serif;--body:"DM Sans",system-ui,sans-serif}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.55 var(--body)}a{color:inherit}:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-.wrap{max-width:1050px;margin:auto;padding:clamp(1rem,3vw,2rem)}
-header{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
-.logo{font:800 1.25rem var(--display);text-decoration:none}.back,.action{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.55rem 1.1rem;border:2px solid var(--ink);border-radius:99px;font-weight:700;text-decoration:none;background:#fff}
-.back:hover,.action:hover{transform:translateY(-2px)}
-main{padding-top:clamp(3rem,9vw,7rem);padding-bottom:4rem}
-.kicker,.eyebrow{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800}
-h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.04em}h1{font-size:clamp(2.7rem,7vw,6rem);max-width:15ch;margin:.55rem 0 1.3rem}
-.lead{font-size:clamp(1.05rem,2vw,1.3rem);max-width:68ch}
-.pill{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:99px;padding:.35rem .85rem;font-size:.85rem;font-weight:800;margin-top:1rem}
-.case{margin-top:clamp(3rem,7vw,5rem);padding:clamp(1.5rem,4vw,3rem);background:#fff;border:2px solid var(--ink);border-radius:25px;box-shadow:6px 6px 0 var(--ink)}
-.case h2{font-size:clamp(2rem,5vw,3.4rem);margin:.4rem 0 1rem}.case p{max-width:70ch}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1.8rem}
-.grid div{background:var(--paper);padding:1.2rem;border:1.5px solid var(--ink);border-radius:16px}.grid div:nth-child(2){background:#eff7c9}
-.grid h3{font-size:1.25rem;margin:.1rem 0 .5rem}.grid p{margin:0}
-.note{margin-top:1.5rem;padding-top:1rem;border-top:1px solid #cac5db;font-size:.94rem}
-.action{margin-top:2.5rem;background:var(--tang);box-shadow:4px 4px 0 var(--ink)}
-footer{border-top:1px solid #c0b8d9;padding:1.5rem 0 2rem}
-@media(max-width:700px){.grid{grid-template-columns:1fr}}
-</style>
-</head>
-<body>
-<div class="wrap">
-<header><a class="logo" href="index.html">Orlando Fuentes</a><a class="back" href="index.html">Volver al inicio</a></header>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f8ff">
+<title>Laboratorio de IA | Orlando Fuentes</title>
+<meta name="description" content="Exploraciones y proyectos personales en desarrollo de Orlando Fuentes: Index, asistentes de IA y sistemas agénticos. Sin promesas de producto terminado.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css"></head><body>
+<header class="site-header"><nav class="shell nav-wrap" aria-label="Navegación principal">
+<a class="brand" href="index.html"><span class="brand-symbol">OF</span> Orlando Fuentes</a>
+<button class="menu-toggle" type="button" data-menu-toggle aria-controls="nav-links" aria-expanded="false">Menú</button>
+<ul id="nav-links" class="nav-links" data-nav-links><li><a href="index.html">Inicio</a></li><li><a href="cv.html">CV / Trayectoria</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="diseno.html">Diseño visual</a></li><li><a href="laboratorio.html">Laboratorio IA</a></li><li><a class="nav-contact" href="contacto.html">Contacto</a></li></ul></nav></header>
 <main>
-<p class="kicker">04 / EXPLORACIÓN Y DESARROLLO</p>
+<section class="page-hero"><div class="shell"><div class="narrow">
+<div class="breadcrumb"><a href="index.html">Inicio</a><span>›</span><span>Laboratorio IA</span></div>
+<span class="eyebrow"><span class="line"></span> 04 · Portafolio y exploración</span>
 <h1>Laboratorio digital e IA.</h1>
-<p class="lead">Mi experiencia profesional está centrada en la capacitación corporativa y las plataformas de aprendizaje. En paralelo, estoy explorando cómo los asistentes con IA y las automatizaciones pueden apoyar la organización de información y el seguimiento de tareas.</p>
-<span class="pill">Proyectos personales · En desarrollo</span>
-<section class="case" aria-labelledby="index-title">
-<p class="eyebrow">PROYECTO PERSONAL</p>
-<h2 id="index-title">Index</h2>
-<p>Index es una idea de asistente personal y centro de control para organizar información, tareas y seguimiento de actividades. Forma parte de mi aprendizaje práctico sobre interfaces, automatización y sistemas agénticos.</p>
-<div class="grid">
-<div><h3>Qué estoy explorando</h3><p>La integración de información y acciones en una experiencia de uso clara, con seguimiento de pendientes y prioridades.</p></div>
-<div><h3>Estado actual</h3><p>Proyecto en desarrollo. No se presenta como una solución ya implementada para clientes ni como un producto comercial terminado.</p></div>
-</div>
-<p class="note">Este apartado documenta mi aprendizaje e iniciativas personales. Las capacidades técnicas, demostraciones y resultados se incorporarán conforme puedan comprobarse.</p>
-</section>
-<a class="action" href="cv.html">Conocer mi trayectoria profesional</a>
+<p class="lead">Mi especialidad profesional actual es la <strong>capacitación corporativa y la tecnología del aprendizaje</strong>. En paralelo, estoy aprendiendo a desarrollar asistentes, flujos automatizados y sistemas agénticos mediante proyectos propios.</p>
+<div class="note-box"><strong>Estado: aprendizaje y desarrollo</strong>Este laboratorio documenta ideas y trabajo en evolución. No equivale a una oferta de agentes de IA comerciales terminados ni incluye resultados no verificados.</div>
+</div></div></section>
+<section class="section section-muted" aria-labelledby="index-title"><div class="shell">
+<div class="section-head"><span class="eyebrow"><span class="line"></span> Proyecto personal</span><h2 id="index-title">Index.</h2><p>Un concepto de asistente personal y centro de control para organizar información, pendientes y seguimiento.</p></div>
+<div class="dual-actions">
+<article class="route-card primary"><span class="route-label">Qué busco resolver</span><h3>Información dispersa, en un mismo lugar</h3><p>Exploro una experiencia donde tareas, prioridades, recordatorios e información relevante puedan administrarse de forma estructurada.</p><ul><li>Visualización organizada de pendientes</li><li>Seguimiento de actividades y prioridades</li><li>Experimentación con automatizaciones</li></ul></article>
+<article class="route-card secondary"><span class="route-label">Estado del proyecto</span><h3>En desarrollo, no en venta</h3><p>Index sigue siendo un proyecto propio de aprendizaje. A medida que existan pruebas, demostraciones y resultados comprobables, los documentaré aquí.</p><ul><li>Concepto y alcance en evolución</li><li>Exploración de interfaces e integraciones</li><li>Sin métricas comerciales atribuidas</li></ul></article>
+</div></div></section>
+<section class="section"><div class="shell">
+<div class="section-head"><span class="eyebrow"><span class="line"></span> Relación con mi experiencia</span><h2>Aprender construyendo.</h2><p>La experiencia previa en sistemas LMS, contenido digital, procesos y reportes sirve como base para explorar tecnologías nuevas. Por ahora mantengo ambas trayectorias diferenciadas.</p></div>
+<div class="feature-grid">
+<article class="feature-card"><span class="index">Base profesional</span><h3>Capacitación y plataformas</h3><p>Experiencia corporativa comprobable en aprendizaje, coordinación y administración de sistemas.</p><a href="cv.html">Conocer trayectoria ↗</a></article>
+<article class="feature-card"><span class="index">Experimentación</span><h3>Automatización</h3><p>Exploración de flujos, tareas y organización asistida por tecnología.</p></article>
+<article class="feature-card"><span class="index">Siguiente etapa</span><h3>Casos verificables</h3><p>La documentación se ampliará cuando haya funcionalidades demostrables y límites técnicos bien definidos.</p></article>
+</div></div></section>
+<section class="section section-tight"><div class="shell"><div class="contact-band"><div><span class="eyebrow" style="color:#c9b7ff">Trayectoria principal</span><h2>¿Buscas mi perfil profesional?</h2><p>Mi experiencia consolidada está documentada en el CV, con cargos, empresas y responsabilidades.</p></div><a class="btn" href="cv.html">Ver CV y trayectoria ↗</a></div></div></section>
 </main>
-<footer>Orlando Fuentes · <a href="diseno.html">Diseño e identidad visual</a> · <a href="index.html">Página principal</a></footer>
-</div>
-</body>
-</html>
+<footer class="site-footer"><div class="shell footer-row"><span>© 2026 Orlando Fuentes · Laboratorio de IA</span><div class="footer-links"><a href="index.html">Inicio</a><a href="cv.html">Trayectoria</a><a href="servicios.html">Servicios</a></div></div></footer>
+<script src="site.js" defer></script>
+</body></html>
